@@ -1,0 +1,19 @@
+p {
+    margin: 10px 0 !important;
+  }
+  .card
+  {
+    background-color: #FEB139;
+    align-items: center;
+  }
+  .divider{
+    background-color: #2C3333;
+  }
+ .login-container {
+    width: 400px;
+    margin-top: 180px;
+    text-align: center;
+  }
+
+  
+
