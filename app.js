@@ -5,7 +5,8 @@ const exphbs = require('express-handlebars')
 const path = require('path')
 const passport = require('passport')
 const session = require('express-session')
-
+const mongoose = require('mongoose')
+const MongoStore = require('connect-mongo');
 const connectDB = require('./config/db')
 
 
@@ -33,7 +34,9 @@ app.use(
   session({
     secret: 'itsmysecret',
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    store: MongoStore.create({
+      mongoUrl: process.env.MONGO_URI})
   })
 )
 
