@@ -22,7 +22,7 @@ router.post('/', ensureAuth, async (req, res) => {
       res.render('error/500')
     }
   })
-  module.exports = router ;
+ 
 
 //Show all blogs
 //GET /blogs
@@ -41,3 +41,56 @@ router.get('/', ensureAuth, async (req, res) => {
     res.render('error/500')
   }
 })
+
+//edit page
+//GET /blogs/edit/:id
+router.get('/edit/:id', ensureAuth, async (req, res) => {
+  try {
+    const blog = await Blog.findOne({
+      _id: req.params.id,
+    }).lean()
+
+    if (!blog) {
+      return res.render('error/404')
+    }
+
+    if (blog.user != req.user.id) {
+      res.redirect('/blogs')
+    } else {
+      res.render('blogs/edit', {
+        blog,
+      })
+    }
+  } catch (err) {
+    console.error(err)
+    return res.render('error/500')
+  }
+})
+
+//Update blog
+//PUT /blogs/:id
+router.put('/:id', ensureAuth, async (req, res) => {
+  try {
+    let blog = await Blog.findById(req.params.id).lean()
+
+    if (!blog) {
+      return res.render('error/404')
+    }
+
+    if (blog.user != req.user.id) {
+      res.redirect('/blogs')
+    } else {
+      blog = await Blog.findOneAndUpdate({ _id: req.params.id }, req.body, {
+        new: true,
+        runValidators: true,
+      })
+
+      res.redirect('/dashboard')
+    }
+  } catch (err) {
+    console.error(err)
+    return res.render('error/500')
+  }
+})
+
+module.exports = router ;
