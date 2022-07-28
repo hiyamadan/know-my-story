@@ -1,8 +1,8 @@
-<h6>My Profile</h6>
-<h3>Welcome {{name}}</h3>
+<h3 class="welcome">Welcome {{name}}</h3>
 <p>Here are your blogs</p>
+<br>
 {{#if blogs}}
-<table class="striped">
+<table class="striped bg" >
     <thead>
         <tr>
             <th>Title</th>
@@ -18,13 +18,13 @@
             <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
             <td><span class="dash-status">{{status}}</span></td>
             <td>
-                <a href="/blogs/edit/{{_id}}" class="btn btn-float">
-                    <i class="fas fa-edit"></i>
+                <a href="/blogs/edit/{{_id}}" class="btn btn-float orange darken-1">
+                    <i class="fas fa-edit fa-cog"></i>
                 </a>
                 <form action="/blogs/{{_id}}" method="POST" id="delete-form">
                     <input type="hidden" name="_method" value="DELETE">
-                    <button type="submit" class="btn grey">
-                        <i class="fas fa-trash"></i>
+                    <button type="submit" class="btn red darken-1">
+                        <i class="fas fa-trash fa-cog"></i>
                     </button>
                 </form>
             </td>
