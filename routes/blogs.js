@@ -93,4 +93,26 @@ router.put('/:id', ensureAuth, async (req, res) => {
   }
 })
 
+// Delete blog
+// DELETE /blogs/:id
+router.delete('/:id', ensureAuth, async (req, res) => {
+  try {
+    let blog = await Blog.findById(req.params.id).lean()
+
+    if (!blog) {
+      return res.render('error/404')
+    }
+
+    if (blog.user != req.user.id) {
+      res.redirect('/stories')
+    } else {
+      await Blog.remove({ _id: req.params.id })
+      res.redirect('/dashboard')
+    }
+  } catch (err) {
+    console.error(err)
+    return res.render('error/500')
+  }
+})
+
 module.exports = router ;
