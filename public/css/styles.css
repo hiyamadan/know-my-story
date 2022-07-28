@@ -2,13 +2,42 @@ p
 {
     margin: 10px 0 !important;
 }
-.card
+.bg
 {
-  background-color: #FEB139;
+  background-color: #DCD7C9;
+}
+.bg_main
+{
+  background-color:#EBEBEB
+}
+.btn-float 
+{
+  float: left;
+  margin-right: 10px;
 }
 .divider
 {
-  background-color: #2C3333;
+  background-color: #505050;
+}
+.header_bg
+{
+  background-color: #007892;
+}
+
+.img-small 
+{
+  width: 180px;
+}
+.fa-cog {
+  color: rgb(54, 53, 53);
+}
+.fa-small 
+{
+  font-size: 16px !important;
+}
+.login-card
+{
+  background-color: #DB6400;
 }
 .login-container 
 {
@@ -16,20 +45,24 @@ p
   margin-top: 180px;
   text-align: center;
 }
-.fa-small 
+.profile_card
 {
-  font-size: 16px !important;
+  font-weight: 500;
+  background-color:#d4d3d3
+  
+}
+.welcome
+{
+  font-weight: 500;
 }
 
-.btn-float 
-{
-  float: left;
-  margin-right: 10px;
-}
 
-.img-small 
-{
-  width: 180px;
-}
+
+
+
+
+
+
+
 
 
