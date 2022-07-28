@@ -90,6 +90,27 @@ router.get('/:id', ensureAuth, async (req, res) => {
   }
 })
 
+//Each user's blogs
+//GET /stories/user/:userId
+router.get('/user/:userId', ensureAuth, async (req, res) => {
+  try {
+    const blogs = await Blog.find({
+      user: req.params.userId,
+      status: 'public',
+    })
+      .populate('user')
+      .lean()
+
+    res.render('blogs/index', {
+      blogs,
+    })
+  } catch (err) {
+    console.error(err)
+    res.render('error/500')
+  }
+})
+
+
 //Update blog
 //PUT /blogs/:id
 router.put('/:id', ensureAuth, async (req, res) => {
