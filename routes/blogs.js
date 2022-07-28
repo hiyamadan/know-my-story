@@ -67,6 +67,29 @@ router.get('/edit/:id', ensureAuth, async (req, res) => {
   }
 })
 
+//Show single blog
+//GET /blog/:id
+router.get('/:id', ensureAuth, async (req, res) => {
+  try {
+    let blog = await Blog.findById(req.params.id).populate('user').lean()
+
+    if (!blog) {
+      return res.render('error/404')
+    }
+
+    if (blog.user._id != req.user.id && blog.status == 'private') {
+      res.render('error/404')
+    } else {
+      res.render('blogs/show', {
+        blog,
+      })
+    }
+  } catch (err) {
+    console.error(err)
+    res.render('error/404')
+  }
+})
+
 //Update blog
 //PUT /blogs/:id
 router.put('/:id', ensureAuth, async (req, res) => {
