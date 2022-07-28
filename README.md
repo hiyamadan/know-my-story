@@ -1,6 +1,6 @@
 # know-my-story
 
-Introduction
+## Introduction
 “The epic story of tomorrow can't be written if it ends today.”
 
 Everyone has difficult times from time to time; however, some people may experience these lows more intensely than others, which can result in depression. Depression symptoms include: loss of interest in activities that one used to especially love, irregular sleeping habits, and feelings of despair or hopelessness. 
@@ -9,16 +9,16 @@ KMS-Know my story provides a forum for individuals to share how they overcame ch
 
 There is always a reason to stay alive. You are loved. You are worthy. You are enough. You are not alone.
 
-Tech Stack
+## Tech Stack
 This Web Application uses Node.js, Express, and MongoDB.
 
-Usage
+## Usage
 1. Add your mongoDB URI and Google OAuth credentials to the config.env file
-2. # Install dependencies
+2. ### Install dependencies
     npm install
-3. # Run in development
+3. ### Run in development
     npm run dev
-4.# Run in production
+4. ### Run in production
     npm start
 
 
