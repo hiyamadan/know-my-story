@@ -1,4 +1,4 @@
-# know-my-story
+# KMS - Know My Story
 
 ## Introduction
 “The epic story of tomorrow can't be written if it ends today.”
@@ -13,7 +13,8 @@ There is always a reason to stay alive. You are loved. You are worthy. You are e
 This Web Application uses Node.js, Express, and MongoDB.
 
 ## Usage
-1. Add your mongoDB URI and Google OAuth credentials to the config.env file
+1. ### Create config.env file
+     Add your mongoDB URI and Google OAuth credentials to the config.env file
 2. ### Install dependencies
     npm install
 3. ### Run in development
