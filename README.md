@@ -22,4 +22,6 @@ This Web Application uses Node.js, Express, and MongoDB.
 4. ### Run in production
     npm start
 
+### Deployed on heroku
+http://afternoon-fortress-58546.herokuapp.com
 
