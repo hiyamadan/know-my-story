@@ -8,7 +8,8 @@ module.exports = function (passport) {
         {
           clientID: process.env.GOOGLE_CLIENT_ID,
           clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-          callbackURL:' http://afternoon-fortress-58546.herokuapp.com/auth/google/callback'
+          callbackURL: '/auth/google/callback',
+          // setRedirectUri: ' http://afternoon-fortress-58546.herokuapp.com/auth/google/callback'
           // callbackURL: '/auth/google/callback',
         },
         async (accessToken, refreshToken, profile, done) => {
