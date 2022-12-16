@@ -21,7 +21,7 @@ There is always a reason to stay alive. You are loved. You are worthy. You are e
 
 ### Setting up the project
 
-- Clone this repository: ``
+- Clone this repository: `https://github.com/hiyamadan/know-my-story.git`
 - Create .env file in the root directory of the project
 - Install node.js and npm on your local machine
 - Install the dependencies: `npm install`
