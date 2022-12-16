@@ -2,7 +2,7 @@
 
 ## 1. Methodology
 
-![](readme_images/Methodology.png)
+![](images/Methodology.png)
 
 ## 2. Description
 “The epic story of tomorrow can't be written if it ends today.”
@@ -33,7 +33,7 @@ There is always a reason to stay alive. You are loved. You are worthy. You are e
   - Server automatically restarts when any of the files are changed
 
 ## 3. Input/Output
-
+![](images/kms4.png)
 
 
 ## 4. Live Link
@@ -41,6 +41,9 @@ There is always a reason to stay alive. You are loved. You are worthy. You are e
 Link: https://documenter.getpostman.com/view/13862647/2s8YzXvffv
 
 ## 5. Screenshot of the Interface
+![](images/kms2.png)
+![](images/kms3.png)
+![](images/kms1.png)
 
 
 
