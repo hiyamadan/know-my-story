@@ -1,6 +1,10 @@
-# KMS - Know My Story
+# Title: KMS - Know My Story
 
-## Introduction
+## 1. Methodology
+
+![](readme_images/Methodology.png)
+
+## 2. Description
 “The epic story of tomorrow can't be written if it ends today.”
 
 Everyone has difficult times from time to time; however, some people may experience these lows more intensely than others, which can result in depression. Depression symptoms include: loss of interest in activities that one used to especially love, irregular sleeping habits, and feelings of despair or hopelessness. 
@@ -9,19 +13,34 @@ KMS-Know my story provides a forum for individuals to share how they overcame ch
 
 There is always a reason to stay alive. You are loved. You are worthy. You are enough. You are not alone.
 
-## Tech Stack
-This Web Application uses Node.js, Express, and MongoDB.
+### Tech Stack Used
 
-## Usage
-1. ### Create config.env file
-     Add your mongoDB URI and Google OAuth credentials to the config.env file
-2. ### Install dependencies
-    npm install
-3. ### Run in development
-    npm run dev
-4. ### Run in production
-    npm start
+- MongoDB - Database used
+- Express - Server/routing API for web app
+- Node - Backend JS runtime
 
-### Deployed on heroku
-http://afternoon-fortress-58546.herokuapp.com
+### Setting up the project
+
+- Clone this repository: ``
+- Create .env file in the root directory of the project
+- Install node.js and npm on your local machine
+- Install the dependencies: `npm install`
+
+### Running the project
+
+- Run the dev script in the terminal: `npm run dev`
+  - Server starts running at http://localhost:3000
+  - Server automatically restarts when any of the files are changed
+
+## 3. Input/Output
+
+
+
+## 4. Live Link
+
+Link: 
+
+## 5. Screenshot of the Interface
+
+
 
